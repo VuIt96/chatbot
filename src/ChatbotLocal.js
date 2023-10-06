@@ -19,7 +19,7 @@ async function init(t, e, l = "450px", s = "550px") {
         (r.style.cursor = "pointer"),
         (r.style.zIndex = "99999"),
         (r.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px"),
-        (r.innerHTML = 0),
+        (r.innerHTML = o),
         r.setAttribute("tabindex", "-1");
 
     let $ = document.createElement("iframe");
