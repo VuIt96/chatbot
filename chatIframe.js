@@ -37,7 +37,6 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
         if (check === true) {
             let i = `https://gptsalebot.com/chat-app/${id ? id : null}`,
                 r = document.createElement("div");
-            // css tháº» div nhÃºng
             r.className = "box-chat-embed";
             r.style.position = "fixed";
             r.style.bottom = "20px";
@@ -67,7 +66,6 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
 
             const greetingBox = document.createElement("div");
 
-            // css greetingBox
             greetingBox.style.background = e;
             greetingBox.className = "greetingBox";
             greetingBox.style.borderRadius = "10px 10px 10px 0px";
@@ -75,10 +73,8 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
             greetingBox.style.position = "relative";
             greetingBox.style.padding = "6px 10px";
 
-            // Táº¡o pháº§n tá»­ con chá»©a vÄƒn báº£n "Xin chÃ o"
             const greetingText = document.createElement("p");
 
-            // css greetingText
             greetingText.className = "greetingText";
             // greetingText.textContent = "Chat ngay";
             greetingText.style.color = "white";
@@ -115,11 +111,9 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
 
             r.appendChild(imageUrl);
 
-            // Ãp dá»¥ng animation tá»« pháº£i qua trÃ¡i
             r.style.animation = "slideInFromRight 1s ease";
             r.setAttribute("tabindex", "-1");
 
-            // tháº» nhÃºng iframe
             let $ = document.createElement("iframe");
             ($.style.zIndex = "999"),
                 ($.style.position = "fixed"),
@@ -171,8 +165,6 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
                 document.body.appendChild(r),
                 document.body.appendChild($);
         } else {
-            // Náº¿u check lÃ  false, dá»«ng láº¡i vÃ  khÃ´ng thá»±c hiá»‡n mÃ£ JavaScript
-
             return;
         }
     }
