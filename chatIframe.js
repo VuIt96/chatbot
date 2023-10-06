@@ -22,7 +22,7 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
             const response = await fetch(apiUrl);
 
             if (!response.ok) {
-                throw new Error(`Lá»—i khi gá»­i yÃªu cáº§u: ${response.status}`);
+                throw new Error(`Error: ${response.status}`);
             }
             const data = await response.json();
             return data.isPublic;
