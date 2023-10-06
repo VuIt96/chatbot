@@ -27,7 +27,7 @@ async function init(t, e, l = "450px", s = "550px", iconLogo) {
             const data = await response.json();
             return data.isPublic;
         } catch (error) {
-            console.error("error:", error);
+            console.error(error);
         }
     }
 
