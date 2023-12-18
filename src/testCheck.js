@@ -19,14 +19,7 @@ async function init(t, e, l = "423px", s = "643px") {
     let logo_greeting = null;
     let iconLogo = null;
     let boxChat_colorWidgetBg = null;
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ messages_history: [] }) // Đưa mảng vào body và chuyển thành chuỗi JSON
-    };
-    const apiUrl = `https://owlee-dev.thinklabs.com.vn/api/chatbot-iframe/${id}/start`;
+    const apiUrl = `https://owlee-dev.thinklabs.com.vn/api/chatbot/avatar/${id}`;
     async function fetchData() {
         try {
             const response = await fetch(apiUrl, requestOptions);
@@ -35,7 +28,7 @@ async function init(t, e, l = "423px", s = "643px") {
                 throw new Error(`error: ${response.status}`);
             }
             const data = await response.json();
-            iconLogo = data.setting.avatar;
+            iconLogo = data.uri_avatar;
         } catch (error) {
             console.error("error:", error);
         }
