@@ -22,7 +22,7 @@ async function init(t, e, l = "423px", s = "643px") {
     const apiUrl = `https://owlee-dev.thinklabs.com.vn/api/chatbot/avatar/${id}`;
     async function fetchData() {
         try {
-            const response = await fetch(apiUrl, requestOptions);
+            const response = await fetch(apiUrl);
 
             if (!response) {
                 throw new Error(`error: ${response.status}`);
